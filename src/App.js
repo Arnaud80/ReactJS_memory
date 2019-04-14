@@ -80,7 +80,8 @@ handleNewPairClosedBy(index) {
 
   render() {
     const { cards, guesses, hallOfFame, matchedCardIndices } = this.state
-    const won = matchedCardIndices.length === 2 //cards.length
+    const won = matchedCardIndices.length === cards.length
+    
     return (
         <div className="memory">
             {cards.map((card, index) => (
